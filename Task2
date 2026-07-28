@@ -1,0 +1,30 @@
+
+
+<!--Task-->
+select empno, deptno from emp;
+select deptno,loc from dept;
+SELECT sal * 12 FROM emp WHERE ename = 'SMITH';
+select ename, sal,sal*12 as annual_sal from emp
+ where (sal*12)>12000;
+SELECT ename FROM emp WHERE job = 'CLERK';
+SELECT* FROM emp Where job = 'SALESMAN';
+SELECT * FROM emp WHERE sal > 2000;
+SELECT *FROM emp WHERE mgr = (SELECT empno FROM emp WHERE ename = 'JONES');
+SELECT * FROM emp WHERE hiredate > '1981-01-01';
+SELECT * FROM emp WHERE dept = '30';
+SELECT empno FROM emp WHERE hiredate >= '1981-01-01' AND hiredate <= '1981-12-31';
+SELECT *FROM emp WHERE job = 'MANAGER';
+SELECT empno,ename,sal,mgr,job,comm FROM emp WHERE comm is not null and comm>0;
+SELECT empno,ename,sal,job,hiredate FROM emp WHERE hiredate < '1987-01-01';
+SELECT empno,ename,sal,mgr,job,comm FROM emp WHERE job = 'ANALYST';
+SELECT * FROM emp WHERE sal > 2000;
+
+Show Databases;
+DESC emp;
+
+
+
+
+
+
+
