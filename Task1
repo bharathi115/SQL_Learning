@@ -36,3 +36,30 @@ INSERT INTO dept VALUES ('10','ACCOUNTING','NEW YORK');
 INSERT INTO dept VALUES ('20','RESEARCH','DALLAS');
 INSERT INTO dept VALUES ('30','SALES','CHICAGO');
 INSERT INTO dept VALUES ('40','OPERATIONS','BOSTON');
+
+<!--TASK-->
+
+SELECT *FROM it_employees;
+INSERT INTO it_employees VALUES (001, 'Brindha', 'CSE',6308, 7856897373);
+INSERT INTO it_employees VALUES (002, 'sheeba', 'CSE',6303, 9087656478);
+INSERT INTO it_employees VALUES (003, 'Soundharya', 'MECH',6302, 8907654637);
+INSERT INTO it_employees VALUES (004, 'Akshaya', 'B.Com',6304, 9087654678);
+INSERT INTO it_employees VALUES (005, 'Kenisha', 'CSE',6328, 8976354356);
+INSERT INTO it_employees VALUES (006, 'Mega', 'Banking',6324, 8987624356);
+INSERT INTO it_employees VALUES (005, 'Banu', 'MBA',6348, 6354678908);
+INSERT INTO it_employees VALUES (005, 'Tareka', 'MBA',6350, 6354678890);
+
+/**Concat**/
+SELECT CONCAT(dept_name, " department") FROM it_employees;
+SELECT dept_no +10 FROM it_employees;
+/**ROW GET**/
+SELECT *FROM it_employees WHERE name="Brindha";
+/**DELETE TABLE**/
+DROP TABLE it_employees;
+DELETE FROM it_employees WHERE name ="Bharathi";
+/** Alter Table**/
+SET sql_safe_updates=0;
+ALTER TABLE it_employees ADD location VARCHAR(90);
+UPDATE it_employees SET location="Salem" ;
+ALTER TABLE  it_emp DROP COLUMN location;
+UPDATE it_emp SET dept_name="Developer" WHERE emp_id=1004 ;
