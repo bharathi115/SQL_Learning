@@ -1,0 +1,42 @@
+create database zoho;
+use zoho;
+create table it_emp(emp_id int ,name varchar(90),dept_name varchar(20),dept_no int);
+select * from it_emp;
+insert into it_emp value(1001,"john","account",401);
+insert into it_emp value(1002,"Sasi","testing",501);
+insert into it_emp value(1003,"Priya","Developer",301);
+insert into it_emp value(1004,"Jeevitha","backend developer",601);
+insert into it_emp value(1005,"Dhinesh","Web desiging",701);
+select concat(dept_name ,"  department") from it_emp;
+select dept_no+100 from it_emp; -- column get
+select * from it_emp where name="dhinesh";-- row get
+drop table it_emp;--  whole table delete
+delete from it_emp where name="john";
+set sql_safe_updates=0;
+alter table  it_emp add location varchar(90);
+update it_emp set location="salem" ;
+alter table  it_emp drop column location;
+update it_emp set dept_name="sql developer" where emp_id=1004 ;
+
+<!--TASK_1-->
+
+CREATE database AMAZON;
+USE AMAZON;
+show databases;
+SELECT database();
+CREATE TABLE employees (emp_no INT PRIMARY KEY,e_name VARCHAR(100),job VARCHAR(50),hiredate DATE,sal DECIMAL(10,2),comm DECIMAL(10,2),dept_no INT);
+CREATE TABLE department (dept_no INT PRIMARY KEY,dep_name VARCHAR(100),location VARCHAR(100));
+show tables;
+SELECT * FROM employees;
+SELECT e_name  employees;
+SELECT sal FROM employees;
+SELECT e_name, sal FROM employees;
+SELECT ename, comm FROM employees;
+SELECT emp_no, dept_no FROM employees;
+SELECT e_name, hiredate FROM employees;
+SELECT e_name, job FROM employees;
+SELECT e_name, job, sal FROM employees;
+SELECT dep_name,location FROM department;
+SELECT dep_name FROM department;
+
+
