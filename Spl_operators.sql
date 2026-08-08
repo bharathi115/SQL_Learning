@@ -1,0 +1,6 @@
+SELECT * FROM emp WHERE comm IS NULL;
+SELECT * FROM emp WHERE job != 'MANAGER';
+SELECT * FROM emp WHERE job = 'SALESMEN' AND DEPTNO =30;
+SELECT * FROM emp WHERE deptno = 30;
+SELECT * FROM emp WHERE deptno = 30 AND sal>1500;
+SELECT * FROM emp WHERE ename LIKE '%S%' AND ename LIKE '%A%';
